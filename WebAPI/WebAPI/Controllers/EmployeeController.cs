@@ -19,7 +19,7 @@ namespace WebAPI.Controllers
 
 
     public class EmployeeController : ApiController
-    {
+   
         private MyDBEntities db = new MyDBEntities();
 
         // GET api/Employee
