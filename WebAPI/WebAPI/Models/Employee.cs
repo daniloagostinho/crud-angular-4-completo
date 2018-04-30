@@ -11,10 +11,14 @@ namespace WebAPI.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Employee
     {
-        public int EmployeeID { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int? EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmpCode { get; set; }
